@@ -10,9 +10,176 @@
 </head>
 
 <body>
-  <img src="img/logo.png" width="64" height="64" alt="logo">
-  <br>
-  <h1>hello, Zatakata!</h1>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__top">
+          <a class="header__logo" href="#">
+            <img class="header__logo-img" src="img/logo.png" alt="logo">
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link active">Обо мне</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Навыки</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Мои работы</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Оставить заявку </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__link-btn">Написать мне</button>
+        </div>
+
+        <div class="header__content">
+          <h1 class="header__title">Разработка сайтов -</h1>
+          <p class="header__text">проектирование, дизайн, верстка, посадка на cms </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about-me">
+    <div class="container">
+      <div class="about-me__inner">
+        <div class="title">
+          <h2 class="title__text title__text--about-me">Обо мне</h2>
+        </div>
+        <div class="about-me__block">
+          <p class="about-me__desc">
+            Давно выяснено, что при оценке дизайна и композиции читаемый
+            текст мешает сосредоточиться. Lorem Ipsum используют потому,
+            что тот обеспечивает более или менее стандартное заполнение
+            шаблона, а также реальное распределение букв и пробелов в
+            абзацах, которое не получается при простой дубликации
+          </p>
+
+          <ul class="social about-me__social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <img class="social__icon" src="img/icons/vk-w.svg" alt="vk">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <img class="social__icon" src="img/icons/inst-w.svg" alt="instagram">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <img class="social__icon" src="img/icons/teleg-w.svg" alt="telegram">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <div class="skills__inner">
+        <div class="title">
+          <h2 class="title__text title__text--skills">Навыки</h2>
+        </div>
+        <div class="skills__container">
+          <div class="skills__card">
+            <div class="skills__card-top">
+              <h5 class="skills__card-title">Frontent</h5>
+            </div>
+            <ul class="skills__card-list">
+              <li class="skills__card-list-item">Html + css</li>
+              <li class="skills__card-list-item">js, react, vue</li>
+              <li class="skills__card-list-item">gulp, webpack</li>
+            </ul>
+          </div>
+          <div class="skills__toggle"></div>
+          <div class="skills__card">
+            <div class="skills__card-top">
+              <h5 class="skills__card-title">Backend</h5>
+            </div>
+            <ul class="skills__card-list">
+              <li class="skills__card-list-item">Php, laravel,</li>
+              <li class="skills__card-list-item">nodejs, deno,</li>
+              <li class="skills__card-list-item">wordpress</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <div class="portfolio__inner">
+        <div class="title">
+          <h2 class="title__text title__text--portfolio">Мои работы</h2>
+        </div>
+
+        <div class="portfolio__list">
+          <div class="portfolio-card portfolio__card">
+            <img class="portfolio-card__img" src="img//portfolio/1.png" alt="card">
+          </div>
+          <div class="portfolio-card portfolio__card">
+            <img class="portfolio-card__img" src="img//portfolio/2.png" alt="card">
+          </div>
+          <div class="portfolio-card portfolio__card">
+            <img class="portfolio-card__img" src="img//portfolio/3.png" alt="card">
+          </div>
+          <div class="portfolio-card portfolio__card">
+            <img class="portfolio-card__img" src="img//portfolio/4.png" alt="card">
+          </div>
+        </div>
+        <button class="portfolio__more-btn">Загрузить еще</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="title">
+          <h2 class="title__text title__text--contact">Оставить заявку</h2>
+        </div>
+        <form action="#" class="contact__form">
+          <input type="text" required placeholder="Ваше имя*">
+          <input type="email" required placeholder="Ваш email*">
+          <textarea name="" cols="20" rows="7" required>Текст сообщения*</textarea>
+          <input type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">Zatakata</div>
+        <ul class="social footer__social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__icon" src="img/icons/vk-b.svg" alt="vk">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__icon" src="img/icons/inst-b.svg" alt="instagram">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <img class="social__icon" src="img/icons/teleg-b.svg" alt="telegram">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/libs.min.js"></script>
   <script src="js/index.min.js"></script>

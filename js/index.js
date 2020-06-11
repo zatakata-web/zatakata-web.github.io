@@ -7,4 +7,4 @@ const a2 = 3;
 console.log(a1)
 console.log(c);
 
-document.querySelector('h1').addEventListener('click', e => alert(e.target.textContent))
+// document.querySelector('h1').addEventListener('click', e => alert(e.target.textContent))

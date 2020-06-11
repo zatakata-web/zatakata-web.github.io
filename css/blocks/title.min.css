@@ -1,0 +1,1 @@
+.title{margin:0 auto;display:flex;justify-content:center;align-items:center}.title__text{display:inline-block;font-weight:600;font-size:36px;color:#fff;position:relative}.title__text--about-me::before{content:'';width:48px;height:48px;background:url(../img/icons/about-me-icon.svg) no-repeat;position:absolute;left:-78px;top:50%;transform:translateY(-50%)}
