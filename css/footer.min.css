@@ -1,0 +1,1 @@
+.footer{padding:30px 0}.footer__inner{display:flex;justify-content:space-between;align-items:center}.footer__copy{padding-left:48px;font-size:24px;font-weight:300;position:relative}.footer__copy::before{content:'';width:32px;height:32px;position:absolute;left:0;top:50%;transform:translateY(-50%);background:url(../img/icons/copyright.svg) no-repeat}
