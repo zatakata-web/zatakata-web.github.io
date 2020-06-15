@@ -1,10 +1,13 @@
-let a = [1, 2, 3];
-let b = [4, 5, 6];
-let c = [...a, ...b];
 
-const a1 = 3;
-const a2 = 3;
-console.log(a1)
-console.log(c);
+const navLinks = $('.header__nav-link');
 
-// document.querySelector('h1').addEventListener('click', e => alert(e.target.textContent))
+navLinks.click(e => {
+    navLinks.removeClass('active');
+    $(e.target).addClass('active');
+})
+
+$('a[href^="#"]').click(function () {
+    const target = $(this).attr('href');
+    $('html, body').animate({ scrollTop: $(target).offset().top }, 800);
+    return false;
+});
