@@ -27,3 +27,17 @@ navOpenBtn.click(function () {
 navCloseBtn.click(function () {
     navContainer.removeClass('active')
 })
+
+// scroll
+const headerHeight = $('.header')[0].clientHeight;
+const headerTop = $('.header__top');
+
+$(document).on("mousewheel", function () {
+    if ($(document).scrollTop() > headerHeight) {
+        headerTop.addClass('header__top--fixed');
+        headerTop.addClass('header__top--animate');
+    } else {
+        headerTop.removeClass('header__top--fixed');
+        headerTop.removeClass('header__top--animate');
+    }
+});
