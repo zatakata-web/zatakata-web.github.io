@@ -5,6 +5,21 @@ const navOpenBtn = $('.header__burger'),
     navCloseBtn = $('.header__nav-close');
 
 
+//preloader 
+function preloader() {
+    $(() => {
+        setTimeout(() => {
+            let p = $('.preloader');
+            p.fadeOut();
+            $('body, html').css('overflow', 'auto');
+
+        }, 1000);
+    });
+}
+
+setTimeout(() => preloader(), 3000);
+
+
 // scroll
 navLinks.click(e => {
     navLinks.removeClass('active');
