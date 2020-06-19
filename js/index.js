@@ -29,15 +29,13 @@ navCloseBtn.click(function () {
 })
 
 // scroll
-const headerHeight = $('.header')[0].clientHeight;
-const headerTop = $('.header__top');
+const headerHeight = $('.header')[0].clientHeight,
+    headerTop = $('.header__top-scroll')
 
-$(document).on("mousewheel", function () {
-    if ($(document).scrollTop() > headerHeight) {
-        headerTop.addClass('header__top--fixed');
-        headerTop.addClass('header__top--animate');
+$(window).scroll(function () {
+    if ($(this).scrollTop() > headerHeight) {
+        headerTop.addClass('header__top-scroll--animate');
     } else {
-        headerTop.removeClass('header__top--fixed');
-        headerTop.removeClass('header__top--animate');
+        headerTop.removeClass('header__top-scroll--animate');
     }
 });
