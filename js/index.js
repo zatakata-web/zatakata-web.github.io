@@ -1,7 +1,7 @@
 const navLinks = $('.header__nav-link');
 
 const navOpenBtn = $('.header__burger'),
-    navContainer = $('.header__nav'),
+    navContainer = $('.header__nav--main'),
     navCloseBtn = $('.header__nav-close');
 
 
@@ -14,7 +14,7 @@ navLinks.click(e => {
 
 $('a[href^="#"]').click(function () {
     const target = $(this).attr('href');
-    $('html, body').animate({ scrollTop: $(target).offset().top }, 800);
+    $('html, body').animate({ scrollTop: $(target).offset().top - 85 }, 800);
     return false;
 });
 
