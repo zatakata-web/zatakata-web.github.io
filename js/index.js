@@ -17,7 +17,7 @@ function preloader() {
     });
 }
 
-setTimeout(() => preloader(), 3000);
+preloader()
 
 
 // scroll
@@ -54,3 +54,46 @@ $(window).scroll(function () {
         headerTop.removeClass('header__top-scroll--animate');
     }
 });
+
+// portfolio
+const moreBtn = $('.portfolio__more-btn');
+const portfolioContainer = $('.portfolio__list');
+const portfolioPages = Math.ceil(portfolio.length / 4);
+let portfolioCurrentPage = 0;
+
+
+const loadPortfolioItems = () => {
+    moreBtn.addClass('portfolio__more-btn--loading');
+    moreBtn.attr('disabled', true);
+    const startIndex = portfolioCurrentPage * 4;
+    const endIndex = startIndex + 4;
+    setTimeout(() => {
+        for (let i = startIndex; i < endIndex; i++) {
+            if (i > portfolio.length - 1) {
+                moreBtn.remove();
+                break;
+            }
+
+            const { preview, fullPreview, images, lightbox } = portfolio[i];
+            const portfolioTemp = `
+                <div class="portfolio-card portfolio__card">
+                    <a href="img//portfolio/${fullPreview}" data-lightbox="${lightbox}">
+                        <img class="portfolio-card__img" src="img//portfolio/${preview}" alt="card">
+                    </a>
+                    ${images.map(item => `<a href="img//portfolio/${item}" data-lightbox="${lightbox}"></a>`).join('')} 
+                </div>
+            `;
+
+            portfolioContainer.append(portfolioTemp);
+            // console.log(portfolioTemp);
+
+        }
+        portfolioCurrentPage++;
+        moreBtn.removeClass('portfolio__more-btn--loading');
+        moreBtn.removeAttr('disabled');
+    }, 1500)
+}
+
+moreBtn.click(loadPortfolioItems)
+
+loadPortfolioItems()
