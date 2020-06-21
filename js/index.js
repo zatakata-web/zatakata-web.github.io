@@ -80,12 +80,11 @@ const loadPortfolioItems = () => {
                     <a href="img//portfolio/${fullPreview}" data-lightbox="${lightbox}">
                         <img class="portfolio-card__img" src="img//portfolio/${preview}" alt="card">
                     </a>
-                    ${images.map(item => `<a href="img//portfolio/${item}" data-lightbox="${lightbox}"></a>`).join('')} 
+                    ${images ? images.map(item => `<a href="img//portfolio/${item}" data-lightbox="${lightbox}"></a>`).join('') : ''} 
                 </div>
             `;
 
             portfolioContainer.append(portfolioTemp);
-            // console.log(portfolioTemp);
 
         }
         portfolioCurrentPage++;
