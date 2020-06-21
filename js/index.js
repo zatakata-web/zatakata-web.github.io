@@ -78,9 +78,9 @@ const loadPortfolioItems = () => {
             const portfolioTemp = `
                 <div class="portfolio-card portfolio__card">
                     <a href="img//portfolio/${fullPreview}" data-lightbox="${lightbox}">
-                        <img class="portfolio-card__img" src="img//portfolio/${preview}" alt="card">
+                        <img class="portfolio-card__img" src="img/portfolio/${preview}" alt="card">
                     </a>
-                    ${images ? images.map(item => `<a href="img//portfolio/${item}" data-lightbox="${lightbox}"></a>`).join('') : ''} 
+                    ${images ? images.map(item => `<a href="img//portfolio/${lightbox}/${item}" data-lightbox="${lightbox}"></a>`).join('') : ''} 
                 </div>
             `;
 
